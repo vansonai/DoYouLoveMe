@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container {
+            width: 100%;
+            text-align: center;
+        }
+        #btn-no {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Do you love me</h2>
+    <button>Yes</button>
+    <button id="btn-no" onmouseover="hoverBtnNo()">No</button>
+</div>
+<script>
+
+    function getNumberRandom(max, min) {
+        return Math.floor(Math.random() * (max - min) + min)
+    }
+    function hoverBtnNo() {
+        const btnNo = document.getElementById('btn-no');
+        const top = getNumberRandom(200,50);
+        const left = getNumberRandom(800,50);
+        btnNo.style.top = top + 'px';
+        btnNo.style.left = left + 'px';
+    }
+</script>
+</body>
+</html>
